@@ -33,11 +33,6 @@
         (backward-delete-char 1 nil))
 		(backward-delete-char 1 nil)))
 
-(defvar meow--kbd-exchange-point-and-mark "C-x C-x"
-  "KBD macro for command `exchange-point-and-mark'.")
-
-(region-beginning) (region-end)
-
 (defun mm-prev ()
   (interactive)
   (when (and (region-active-p)
