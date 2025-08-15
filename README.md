@@ -3,6 +3,7 @@ minor meow-mode
 
 key bindings
 
+```
 (defun mm-define-keys ()
   (define-key mm-keymap (kbd "j") 'mm-next)
   (define-key mm-keymap (kbd "k") 'mm-prev)
@@ -51,3 +52,4 @@ key bindings
   (define-key mm-keymap [escape] 'keyboard-quit)
   (define-key mm-keymap (kbd "<escape>") 'keyboard-quit)
   )
+```
