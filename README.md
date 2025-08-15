@@ -3,7 +3,12 @@ a minor mode inspired by meow
 
 using key bindings below plus the commands rectangle-mark-mode (C-x SPC) and string-rectangle (C-x r t) can satisfy most of my daily needs
 
-key bindings
+# dependency
+counsel/ivy 
+
+rg (search in current directory)
+
+# key bindings
 
 
 ```
