@@ -8,6 +8,8 @@ counsel/ivy
 
 rg (search in current directory)
 
+neotree (accompany with initneotree.el)
+
 # key bindings
 
 
