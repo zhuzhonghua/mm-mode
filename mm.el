@@ -133,12 +133,15 @@
     (mm--disable)))
 
 (defun mm--enable ()
-  (message "enable mm-mode %S" last-command)
-  (when (and (eq last-command 'self-insert-command)
-             (or (equal ?\) (char-before (point)))
-                 (equal ?\} (char-before (point)))
-                 (equal ?\" (char-before (point))))
-             )
+  (when (or (and (equal ?\) (char-before (point)))
+                 (equal ?\( (char-before (- (point) 1))))
+
+            (and (equal ?\} (char-before (point)))
+                 (equal ?\{ (char-before (- (point) 1))))
+
+            (and (equal ?\" (char-before (point)))
+                 (equal ?\" (char-before (- (point) 1))))
+            )
     (backward-char))
   (add-hook 'minibuffer-setup-hook #'mm--minibuffer-setup)
   )
