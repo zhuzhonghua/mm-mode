@@ -1,7 +1,19 @@
 # mm-mode
 a minor mode inspired by meow
 
-using key bindings below plus the commands rectangle-mark-mode (C-x SPC) and string-rectangle (C-x r t) can satisfy most of my daily needs
+when key bindings below can not satisfy needs, enter [i] to exit mm-mode, then use original emacs keystrokes like C-s, C-x SPC or C-x r t
+
+# installation
+download mm.el and initneotree.el and put them into your load-path
+
+add the following code to the configuration file 
+
+```
+
+(require 'initneotree)
+(require 'mm)
+
+```
 
 # dependency
 counsel/ivy 
