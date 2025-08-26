@@ -14,6 +14,9 @@ add the following code to the configuration file
 (require 'mm)
 
 ```
+press esc to enter mm-mode
+
+press i, o, O, a, cw or others to exit mm-mode
 
 # dependency
 counsel/ivy 
