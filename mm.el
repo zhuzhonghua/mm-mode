@@ -220,6 +220,7 @@
 (define-key mm-keymap (kbd "O") 'mm-open-above)
 (define-key mm-keymap (kbd "p") 'mm-yank)
 (define-key mm-keymap (kbd "r") 'mm-replace)
+(define-key mm-keymap (kbd "t") 'string-rectangle)
 (define-key mm-keymap (kbd "u") 'mm-undo)
 (define-key mm-keymap (kbd "v") 'mm-mark)
 (define-key mm-keymap (kbd "V") 'mm-mark-line)
