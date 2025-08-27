@@ -224,8 +224,6 @@
   (define-key mm-keymap (kbd "x") 'mm-delete)
   (define-key mm-keymap (kbd "y") 'mm-save)
   (define-key mm-keymap (kbd "C-<tab>") 'mm-swith-to-other-buffer)
-  (define-key mm-keymap (kbd "<C-left>") 'tab-bar-switch-to-prev-tab)
-  (define-key mm-keymap (kbd "<C-right>") 'tab-bar-switch-to-next-tab)
   (define-key mm-keymap (kbd "(") 'backward-sexp)
   (define-key mm-keymap (kbd ")") 'forward-sexp)
   (define-key mm-keymap (kbd "{") 'backward-sexp)
