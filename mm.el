@@ -68,7 +68,10 @@
 
 (defun mm-replace ()
   (interactive)
-  (delete-char 1)
+  (cond ((region-active-p)
+         (mm-delete))
+        (t
+         (delete-char 1)))
   (mm-insert))
 
 (defun mm-insert ()
