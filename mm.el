@@ -173,14 +173,13 @@
 
 (defun mm-ready-delete ()
   (interactive)
-  (cond
-   ((region-active-p)
-    (mm-delete))
-   (t
-    (set-mark-command nil)
-    (when (eq last-command 'mm-ready-delete)
-      (mm-mark-line)
-      (mm-delete)))))
+  (cond ((eq last-command 'mm-ready-delete)
+         (save-excursion
+           (mm-mark-line)
+           (mm-delete)))
+        ((region-active-p)
+         (mm-delete))
+        ))
 
 (defun mm-ready-change ()
   (interactive)
@@ -206,10 +205,12 @@
   (define-key mm-keymap (kbd "3") 'split-window-right)
   (define-key mm-keymap (kbd "2") 'split-window-below)
   (define-key mm-keymap (kbd "1") 'delete-other-windows)
-
   (define-key mm-keymap (kbd "o") 'mm-open-below)
   (define-key mm-keymap (kbd "b") 'backward-word)
+	;; cw to delete a word and exit mm-mode
   (define-key mm-keymap (kbd "c") 'mm-ready-change)
+	;; dd to delete a line
+	;; dw to delete a word
   (define-key mm-keymap (kbd "d") 'mm-ready-delete)
   (define-key mm-keymap (kbd "e") 'mm-end-of-line)
   (define-key mm-keymap (kbd "f") 'scroll-up-command)
