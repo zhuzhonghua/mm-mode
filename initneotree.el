@@ -24,4 +24,7 @@
 (global-set-key [f12] 'neotree-tab-toggle)
 (global-set-key [f11] 'tab-bar-mode)
 
+(global-set-key (kbd "<C-left>") 'tab-bar-switch-to-prev-tab)
+(global-set-key (kbd "<C-right>") 'tab-bar-switch-to-next-tab)
+
 (provide 'initneotree)
