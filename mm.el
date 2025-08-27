@@ -184,6 +184,8 @@
            (mm-delete)))
         ((region-active-p)
          (mm-delete))
+        (t
+         (set-mark-command nil))
         ))
 
 (defun mm-ready-change ()
