@@ -234,6 +234,8 @@
 (define-key mm-keymap (kbd ")") 'forward-sexp)
 (define-key mm-keymap (kbd "{") 'backward-sexp)
 (define-key mm-keymap (kbd "}") 'forward-sexp)
+(define-key mm-keymap (kbd "[") 'backward-sexp)
+(define-key mm-keymap (kbd "]") 'forward-sexp)
 (define-key mm-keymap (kbd "DEL") 'mm-clear-before-space)
 (define-key mm-keymap (kbd "<") 'beginning-of-buffer)
 (define-key mm-keymap (kbd ">") 'end-of-buffer)
